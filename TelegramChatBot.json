@@ -4,7 +4,7 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "=# Rol: eres un agente que ayuda a resolver los problemas del usuario, segun la informacion que se tiene en la herramienta Vacaciones, unicamente, toda informacion que requiera el usuario debe ser consultada alli. No es permitido dar informacion de otras fuentes\n# Instrucciones: \n- Usuario: {{ $('Telegram Trigger1').item.json.message.from.first_name }}.\n- Saluda solo en el primer mensaje, luego sigue la conversación naturalmente.\n- Máximo 150 caracteres por respuesta.\n- Sé motivacional y claro.\n- Responde a: {{ $('Telegram Trigger1').item.json.message.text }}",
+        "text": "=# Rol: eres un agente que responde preguntas del usuarios, segun la informacion que se tiene en la herramienta Vacaciones, puedes buscar informacion relacionada con Vacaciones y ausencias alli.\n# Instrucciones: \n- Usuario: {{ $('Telegram Trigger1').item.json.message.from.first_name }}.\n- Saluda solo en el primer mensaje, luego sigue la conversación naturalmente.\n- Máximo 150 caracteres por respuesta.\n- Sé motivacional y claro.\n- Responde a: {{ $('Telegram Trigger1').item.json.message.text }}",
         "options": {}
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -163,7 +163,7 @@
     },
     {
       "parameters": {
-        "description": "Esta herramienta va a dar informacion sobre las vacaciones de los empleados de una empresa"
+        "description": "Esta herramienta va a dar informacion sobre las vacaciones de los empleados de una empresa y ausencia."
       },
       "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
       "typeVersion": 1.1,
@@ -266,11 +266,11 @@
       ]
     }
   },
-  "active": false,
+  "active": true,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "9e281f12-9591-40f0-9bfe-51bc612cc2ec",
+  "versionId": "81190c95-18e6-4dee-8407-8dc9b9542471",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "c7713deb50a929242d833f300b9fa095b76f0ee6eac5e741e4b71c7490a124f5"
